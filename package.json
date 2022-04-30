@@ -11,7 +11,8 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^4.0.2",
-    "gulp-file-include": "^2.3.0"
+    "gulp-file-include": "^2.3.0",
+    "gulp-webserver": "^0.9.1"
   },
   "dependencies": {
     "@babel/core": "^7.17.10",
