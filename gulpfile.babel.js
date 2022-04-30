@@ -4,15 +4,15 @@ import fileInclude from "gulp-file-include";
 
 export const includeFile = () => {
   return gulp
-    .src(["./src/html/*"])
+    .src(["./src/html/**/*"])
     .pipe(
       fileInclude({
         prefix: "@@",
         basepath: "./src/assets/front/include",
       })
     )
-    .pipe(gulp.dest("./dest/html"));
+    .pipe(gulp.dest("./dist/html"));
 };
-export const clean = () => del(["build"]);
+export const clean = () => del(["dist"]);
 
 export const dev = gulp.series([clean, includeFile]);
