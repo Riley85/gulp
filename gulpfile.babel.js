@@ -5,6 +5,9 @@ import webserver from "gulp-webserver";
 import GulpImage from "gulp-image";
 import dartSass from "sass";
 import gulpSass from "gulp-sass";
+import autoPrefixer from "gulp-autoprefixer";
+import csso from "gulp-csso";
+
 const sass = gulpSass(dartSass);
 
 const includeFile = () => {
@@ -34,6 +37,8 @@ const styles = () => {
   return gulp
     .src("./src/assets/front/scss/**/*.scss")
     .pipe(sass().on("error", sass.logError))
+    .pipe(autoPrefixer({ cascade: false, grid: "autoplace" }))
+    .pipe(csso())
     .pipe(gulp.dest("./dist/assets/front/css"));
 };
 const watch = () => {

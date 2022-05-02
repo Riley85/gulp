@@ -6,6 +6,12 @@ $red: red;
 .test {
   font-size: 16px;
   color: $red;
+  display: grid;
+}
+
+.test2 {
+  display: flex;
+  align-items: center;
 }
 
 img {
