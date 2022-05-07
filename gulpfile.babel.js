@@ -29,8 +29,9 @@ const ws = () =>
     gulp.src('./dist').pipe(
         webserver({
             livereload: true,
-            open: true,
-            directoryListing: true,
+            open: '/html/',
+            directoryListing: false,
+            // fallback: '/html/index.html',
         })
     );
 
